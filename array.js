@@ -1,80 +1,66 @@
-function getAge(age) {
-    
-    if (isNaN(age) || age < 18) {
-        alert ('Ты куда лезишь?')
-    } else {
-        alert('Добро пожаловать')
-        return true;
-    }
+const companies = [
+    { id: 1, name: "Компания А", industry: "IT", employees: 150, revenue: 200000 },
+    { id: 2, name: "Компания Б", industry: "Финансы", employees: 300, revenue: 500000 },
+    { id: 3, name: "Компания В", industry: "Производство", employees: 500, revenue: 750000 },
+    { id: 4, name: "Компания Г", industry: "Ритейл", employees: 50, revenue: 100000 },
+    { id: 5, name: "Компания Д", industry: "IT", employees: 200, revenue: 300000 },
+    { id: 6, name: "Компания Е", industry: "Логистика", employees: 100, revenue: 150000 }
+];
 
-}
-
-
-
-function task(a, b) {
-
-    alert(`${a + b} \n ${a - b}\n ${a / b} \n ${a * b} \n ${ a ** b} \n ${a % b}`)
-    
-}
+// Задача 1: Отфильтровать компании, относящиеся к индустрии IT.
 
 
-
-function max_name(name1, name2, name3) {
-    
-    let longName = name1
-    const names = [name2, name3] 
-
-    names.forEach(long => {
-        if (long.length > longName.length) {
-            longName = long
-        }
-    })
-    
-    return longName;
-    
-}
-
-
-
-function min() {
-    let getNum = []
-
-    for (let num of arguments) {
-        if (typeof num === 'number') {
-            getNum.push(num)
-        } else if (Array.isArray(num)) {
-            getNum.push(...num)
-        } else if (typeof num === 'object' && num !== null) {
-            getNum.push(...Object.values(num))
+function it(ind) {
+    for (const comp of companies) {
+        
+        if (comp.industry == "IT") {
+            ind.push(comp)
         }
     }
-
-    return Math.min(...getNum)
 }
 
 
+it(industryIt = [])
+console.log(industryIt);
+
+// Задача 2: Отсортировать компании по доходу в порядке убывания.
+
+ function rev(companies) {
+    const a = companies.length
+    const arr = [...companies]
+
+    for (let i = 0; i < a -1; i++) {
+
+        for (let j = 0; j < a -1 -i; j++) {
+
+            if (arr[j].revenue < arr[j + 1].revenue) {
+
+                let temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+
+            }
+        }
+    }
+    return arr;
+ }
+ 
+ console.log(sort = rev(companies));
+ 
 
 
+// Задача 3: Посчитать общее количество сотрудников во всех компаниях.
 
-const user = +prompt('Сколько тебе лет?')
 
-if (getAge(user)) {
-
-    const v1 = parseFloat(prompt('Введите число a:'))
-    const v2 = parseFloat(prompt('Введите число b:'))
-
-    if (!isNaN(v1, v2)) {
-
-        task(v1, v2)
-
-    } else {
-        alert('Это не число')
+ function totalQuantity() {
+    let total = 0
+    for (let company of companies) {
+        total += company.employees
     }
 
-    console.log(max_name('Alex', 'George', 'Michael'));
+    return total;
+ }
 
-    console.log(min(1, 2));
-    console.log(min([1, 2]));
-    console.log(min({a: 1, b: 2}));
-    console.log(min({a: 1, b: 2}, {a: 11, b: 12}));
-}
+ 
+ console.log(totalQuantity());
+ 
