@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "IBM Plex Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FEFAFD;
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 58px 25px;
+            .menu {
+                display: flex;
+                .tabs {
+                    display: flex;
+                    padding: 11px 13px;
+                    background: linear-gradient(90deg, #121212 0%, #282829 100%);
+                    
+                    border-radius: 48px;
+                    
+                }
+                
+                .tabDirectory {
+                    display: flex;
+                    padding: 11px 30px;
+                    gap: 32px;
+                    background: linear-gradient(90deg, #121212 0%, #282829 100%);
+                    border-radius: 48px;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .logo {
+                translate: -90px;
+                a {
+                    font-family: "Krona One", sans-serif;
+                    font-weight: 400;
+                    font-size: 32px;
+                    color: #143B3F;
+                    text-decoration: none;
+                }
+            }
+
+        .profile  {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                font-weight: 700;
+                font-size: 16px;
+                text-decoration: none;
+                color: #143B3F;
+            }
+        }
+    }
+
+    main {
+        display: flex;  
+        flex-direction: column;  
+        align-items: center;
+        gap: 26px;
+        justify-content: center;
+        padding: 94px 190px 147px;
+        color: #474747;
+
+        .informationApplicant {
+            display: flex;
+            column-gap: 167px;
+
+            .fillForm {
+                h1 {
+                    font-family: 'Rubik', sans-serif;
+                    font-size: 40px;
+                }
+                
+                p {
+                    font-weight: 400;
+                    font-size: 20px;
+                }
+            }
+
+            .formInformation {
+                display: flex;                
+                gap: 20px;
+            }
+        }
+
+        .userInformation {
+            display: flex;
+            flex-direction: column;
+            .name {
+                display: flex;
+                gap: 20px;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 4px;
+    
+                    .red {
+                        color: red;
+                    }
+    
+                    input {
+                        width: 334px;
+                        height: 36px;
+                        padding: 6px 12px;
+                        border-radius: 6px;
+                        border-style: solid;
+                        border: 2px solid #A1A1A1
+                    }
+
+                    a {
+                        translate: 312px -32px;
+                        width: 12px;
+                    }
+                
+                }
+            }
+            .social {
+                display: flex;
+                gap: 20px;
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 4px;
+
+                    input {
+                        width: 580px;
+                        height: 36px;
+                        padding: 6px 12px;
+                        border-radius: 6px;
+                        border-style: solid;
+                        border: 2px solid #A1A1A1
+                    }
+
+                    a {
+                        translate: 556px -33px;
+                        width: 12px;
+                    }
+                }
+
+                form:nth-child(2) {
+                    input {
+                        width: 444px;
+                    }
+
+                    a {
+                        translate: 420px -33px;
+                    }
+                }
+            }
+            .dropDown {
+                display: flex;
+                gap: 20px;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 4px;
+                }
+
+                input {
+                    width: 334px;
+                    height: 36px;
+                    padding: 6px 12px;
+                    border-radius: 6px;
+                    border-style: solid;
+                    border: 2px solid #A1A1A1;
+                    background-color: #EDEDED;                    
+                }
+                a {
+                    translate: 310px -33px;                    
+                }            
+            }
+        }
+    }
+    .employmentInformation {
+        display: flex;
+        flex-direction: column;
+
+        .employ {
+            padding-bottom: 21px;
+
+            h2 {
+                font-weight: 400;
+                font-size: 22px;
+            }
+        }
+        .social {
+            display: flex;
+            column-gap: 20px;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                row-gap: 4px;
+
+                input {
+                    width: 580px;
+                    height: 36px;
+                    padding: 6px 12px;
+                    border-radius: 6px;
+                    border-style: solid;
+                    border: 2px solid #A1A1A1
+                }
+
+                a {
+                    translate: 556px -33px;
+                    width: 12px;
+                }
+            }
+
+            form:nth-child(2) {
+                input {
+                    width: 444px;
+                }
+
+                a {
+                    translate: 420px -33px;
+                }
+            }
+        }
+        .name {
+            display: flex;
+            column-gap: 20px;
+            form {
+                display: flex;
+                flex-direction: column;
+                row-gap: 4px;
+
+                input {
+                    width: 334px;
+                    height: 36px;
+                    padding: 6px 12px;
+                    border-radius: 6px;
+                    border-style: solid;
+                    border: 2px solid #A1A1A1;
+                }
+
+                a {
+                    translate: 312px -32px;
+                    width: 12px;
+                }
+            
+            }
+        }
+        .check {
+            transform: translateY(-15px);
+        }
+    }
+    .buttons  {
+        padding-top: 14px;
+        display: flex;
+        column-gap: 20px;
+        button {
+            width: 261px;
+            height: 47px;
+            border: none;
+            border-radius: 65px;
+            background-color: #474747;
+            color: white;
+            font-size: 20px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+}
