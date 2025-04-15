@@ -34,6 +34,7 @@ header {
         .logo {
             translate: -90px;
             a {
+                font-family: "Krona One", sans-serif;
                 font-weight: 400;
                 font-size: 32px;
                 color: #143B3F;
