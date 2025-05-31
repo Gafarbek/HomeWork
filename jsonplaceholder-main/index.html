@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/assets/styles/style.css">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <form class="form" action="">
+        <input type="text" name="title" placeholder="Title" required>
+        <input type="text" name="body" placeholder="Body" required>
+        <button type="submit">Создать пост</button>
+      </form>
+      <div class="posts">
+      </div>
+      <div id="update-modal" class="hidden">
+        <form class="form" action="">
+          <h3 style="text-align: center;">Обновить пост</h3>
+          <input type="text" name="title" placeholder="Title" required>
+          <textarea type="text" rows="4" cols="12" placeholder="Body"></textarea>
+          <button type="submit">Обновить пост</button>
+          <button type="button" id="delete-post-button">Удалить пост</button>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
